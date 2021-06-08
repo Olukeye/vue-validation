@@ -1,4 +1,5 @@
 <template>
+
      <nav class="navbar navbar-expand navbar-light fixed-top">
    <div class="container">
      <router-link to="/" class="navbar-brand">VEVI</router-link>
@@ -17,6 +18,8 @@
      </div>
    </div>
  </nav>
+
+
 </template>
 
 <script>
