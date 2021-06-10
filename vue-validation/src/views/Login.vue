@@ -12,7 +12,7 @@
             <input type="password" class="form-control"  v-model="password" placeholder="Password"/>
         </div>
         
-        <button class="btn btn-primary btn-block">Login</button>
+        <button  type="submit" class="btn btn-primary btn-block">Login</button>
     </form>
 </template>
 
@@ -28,11 +28,11 @@ export default({
     },
     methods: {
         async handleSubmi() {
-            await axios('login',{
+         const res = await axios.post('/login',{
                 email: this.email,
                 password: this.password
             });
-          
+            localStorage.setItem('token', res.data.token, res.data.user);
         }
     }
  

@@ -45,9 +45,9 @@ export default ({
   },
   methods : {
      async handleSubmit() {
-         await axios.post('register', {
+         await axios.post('/register', {
               name: this.name,
-            //   last_name: this.last_name,
+            //   last_name: this. last_name,
               email: this.email,
               password: this.password,
               confirm_password: this.confirm_password
