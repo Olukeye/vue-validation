@@ -11,12 +11,18 @@
 
 <script>
 import Nav from './components/Nav'
+import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
     Nav,
-  }
+  },
+    async created() {
+        const res = await axios.get('user')
+
+        this.$store.dispatch('user', res.data)
+    }
 }
 </script>
 

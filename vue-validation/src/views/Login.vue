@@ -33,6 +33,8 @@ export default({
                 password: this.password
             });
              localStorage.setItem('token', res.data.token);
+             this.$store.dispatch('user', res.data.user)
+             this.$router.push('/')
         }
     }
  

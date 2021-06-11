@@ -1,20 +1,19 @@
 <template>
    <div>
-        <h3>HELLO WORLD!</h3>
+        <h3 v-if="user">Hi, {{user.name}}</h3>
+        <h3 v-if="!user">Please login!</h3>
    </div>
 </template>
 
 <script>
-import axios from 'axios'
+import {mapGetters} from 'vuex'
+
 export default({
     name: 'Home',
-    async created() {
-        const res = await axios.get('user', {
-            headers: {
-                Authorization: 'Bearer' + localStorage.getItem('token')
-            }
-        })
-        console.log(res)
+    computed: {
+      ...mapGetters(['user'])
     }
+   
 })
 </script>
+
