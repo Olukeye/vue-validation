@@ -36,6 +36,7 @@ export default({
     methods: {
       handleClick() {
         localStorage.removeItem('token');
+        this.$store.dispatch('user', null)
         this.$router.push('/');
       }
     },
