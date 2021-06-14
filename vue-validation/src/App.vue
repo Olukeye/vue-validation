@@ -80,8 +80,8 @@ export default {
   .custom-control-label{
     font-weight: 400;
   }
-  /* .forgoter-password, */
-  .forgoter-password {
+  /* .forgot-password, */
+  .forgot-password {
     text-align: right;
     font-size: 13px;
     padding-top: 10px;
@@ -89,7 +89,7 @@ export default {
     margin: 0;
   }
   
-  .forgoter-password a {
+  .forgot-password  {
     color: #167bff;
   }
 </style>

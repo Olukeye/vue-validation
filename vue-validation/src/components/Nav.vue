@@ -12,9 +12,6 @@
          <li class="nav-item">
             <router-link to="/signup" class="nav-link" >signup</router-link>
          </li>
-         <li class="nav-item">
-           <a href="#" class="nav-link">Sign out</a>
-         </li>
        </ul>
               <!--so if its user, show logout on the home page -->
         <ul class="navbar-nav ml-auto" v-if="user">
